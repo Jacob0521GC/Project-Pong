@@ -3,12 +3,11 @@ using UnityEngine;
 public class Scoring : MonoBehaviour
 {
     // Two seperate scoring integers
-    float playerOneScore = 0;
-    float playerTwoScore = 0;
+    int playerOneScore = 1;
+    int playerTwoScore = 1;
 
-    
+    int scoreAdd = 1;
 
-    
     // Ball game object reference
     public GameObject Ball;
 
@@ -23,12 +22,14 @@ public class Scoring : MonoBehaviour
     {
         if (transform.position.x > 8.7f)
             {
-                Debug.Log("Player 1 Score: " + playerOneScore + 1);
+                Debug.Log("Player 1 Score: " + playerOneScore);
+                playerOneScore = playerOneScore + scoreAdd;
             }
 
         if (transform.position.x < -8.7f)
         {
-            Debug.Log("Player 2 Score: " + playerTwoScore + 1);
+            Debug.Log("Player 2 Score: " + playerTwoScore);
+            playerTwoScore = playerTwoScore + scoreAdd;
         }
     }
 }
