@@ -3,9 +3,12 @@ using UnityEngine;
 public class Scoring : MonoBehaviour
 {
     // Two seperate scoring integers
-    public int playerOneScore = 0;
-    public int playerTwoScore = 0;
+    float playerOneScore = 0;
+    float playerTwoScore = 0;
 
+    
+
+    
     // Ball game object reference
     public GameObject Ball;
 
@@ -18,11 +21,14 @@ public class Scoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if GameObject.Find (Ball).transform.x => 10.0f();
+        if (transform.position.x > 8.7f)
             {
-                
+                Debug.Log("Player 1 Score: " + playerOneScore + 1);
             }
 
-        
+        if (transform.position.x < -8.7f)
+        {
+            Debug.Log("Player 2 Score: " + playerTwoScore + 1);
+        }
     }
 }

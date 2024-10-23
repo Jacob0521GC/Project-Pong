@@ -33,13 +33,13 @@ public class Ball : MonoBehaviour
 
         if (transform.position.x > 8.7f)
         {
-            
+            directionX = -directionX;
         }
 
 
         if (transform.position.x < -8.7f)
         {
-            
+            directionX = -directionX;
         }
 
     }
